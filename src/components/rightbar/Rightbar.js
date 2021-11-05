@@ -4,7 +4,7 @@ import { Users } from "../../fakeData.js";
 import Online from "../online/Online";
 
 function Rightbar({profile}) {
-
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER
 const HomeRightbar = () => {
   return (
     <> 
@@ -50,19 +50,19 @@ const ProfileRightbar = () => {
   <h4 className="rightbarTitle">User friends</h4>
   <div className="rightbarFollowings">
     <div className="rightbarFollowing">
-      <img src="assets/person/1.jpeg" alt="" className="rightbarFollowingImg" />
+      <img src={`${PF}person/1.jpeg`} alt="" className="rightbarFollowingImg" />
       <span className='rightbarFollowingName'>John Carter</span>
     </div>
     <div className="rightbarFollowing">
-      <img src="assets/person/2.jpeg" alt="" className="rightbarFollowingImg" />
+      <img src={`${PF}person/2.jpeg`} alt="" className="rightbarFollowingImg" />
       <span className='rightbarFollowingName'>John Carter</span>
     </div>
     <div className="rightbarFollowing">
-      <img src="assets/person/3.jpeg" alt="" className="rightbarFollowingImg" />
+      <img src={`${PF}person/3.jpeg`} alt="" className="rightbarFollowingImg" />
       <span className='rightbarFollowingName'>John Carter</span>
     </div>
     <div className="rightbarFollowing">
-      <img src="assets/person/4.jpeg" alt="" className="rightbarFollowingImg" />
+      <img src={`${PF}person/4.jpeg`} alt="" className="rightbarFollowingImg" />
       <span className='rightbarFollowingName'>John Carter</span>
     </div>
   </div>
