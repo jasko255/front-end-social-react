@@ -10,13 +10,14 @@ const Feed = ({ username }) => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = username
+      const res =  username
         ? await axios.get("/posts/profile/" + username)
-        : await axios.get("/posts/timeline/616e9501332479d6f44a1477");
+         : await axios.get("posts/timeline/616e9501332479d6f44a1477");
+         console.log(res);
       setPosts(res.data);
     };
     fetchPosts();
-  }, [username]);
+  }, []);
 
   return (
     <div className="feed">

@@ -13,7 +13,7 @@ const Post = ({ post }) => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users/${post.userId}`);
+      const res = await axios.get(`/users?userId=${post.userId}`);
       setUser(res.data);
       console.log('response', res.data);
     };
@@ -38,7 +38,7 @@ const Post = ({ post }) => {
                 alt=""
               />{" "}
             </Link>
-            <span className="postUsername">{user?.username}</span>
+            <span className="postUsername">{user.username}</span>
             <span className="postDate">{format(post.createdAt)} </span>
           </div>
           <div className="postTopRight">
